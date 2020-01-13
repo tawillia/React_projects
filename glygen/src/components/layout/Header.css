@@ -11,17 +11,11 @@
 .nav-link:hover {
 	color: var(--light-blue) !important;
 }
-/* .nav-link:hover,
-.nav-link.active:hover {
-	color: var(--light-blue);
-} */
+
 .gg-bg-blue {
 	background-color: var(--gg-bg-blue) !important;
 }
-/* .nav-link.active > a {
-	margin-right: -15px !important;
-	margin-left: -15px !important;
-} */
+
 .nav-link.active {
 	color: var(--white) !important;
 	border-bottom: 4px solid var(--light-blue) !important;

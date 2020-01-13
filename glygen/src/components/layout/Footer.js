@@ -4,16 +4,19 @@ import './Footer.css';
 import logoFooter from '../images/glygen_logos/glygen-logoW-top.svg';
 import uga from '../images/univ_logos/logo-uga.png';
 import gwu from '../images/univ_logos/logo-gwu.png';
-import { Navbar, Col, Nav, Image, Container, Row } from 'react-bootstrap';
+import { Navbar, Col, Nav, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Container } from 'reactstrap';
 import '../../App.css';
 
 const Footer = () => (
 	<React.Fragment className='fixed-bottom'>
 		<Navbar sticky='bottom' className='gg-bg-blue text-center footer'>
-			<Container>
-				<Row>
-					<Col sm={12} md={6} xl={2}>
+			<Container
+				className='themed-container container-fluid justify-content-center'
+				fluid={true}>
+				<Row xs='1' sm='2' md='4'>
+					<Col>
 						<Navbar.Brand href='#home'>
 							<img
 								href='#home'
@@ -23,23 +26,15 @@ const Footer = () => (
 							/>
 						</Navbar.Brand>
 					</Col>
-					<Col sm={12} md={6} xl={4}>
+					<Col>
 						<Nav className='justify-content-center'>
-							<Nav.Item>
-								<Nav.Link to='/license'>License</Nav.Link>
-							</Nav.Item>
-							<Nav.Item>
-								<Nav.Link to='/privacy_policy'>Privacy&nbsp;Policy</Nav.Link>
-							</Nav.Item>
-							<Nav.Item>
-								<Nav.Link href='disclaimer.js'>Disclaimer</Nav.Link>
-							</Nav.Item>
-							<Nav.Item>
-								<Nav.Link href='contact'>Contact&nbsp;Us</Nav.Link>
-							</Nav.Item>
+							<Nav.Link to='/license'>License</Nav.Link>
+							<Nav.Link to='/privacy_policy'>Privacy&nbsp;Policy</Nav.Link>
+							<Nav.Link href='disclaimer.js'>Disclaimer</Nav.Link>
+							<Nav.Link href='contact'>Contact&nbsp;Us</Nav.Link>
 						</Nav>
 					</Col>
-					<Col sm={12} md={6} xl={4}>
+					<Col>
 						<Navbar.Text>
 							Funded by{' '}
 							<a
@@ -49,7 +44,8 @@ const Footer = () => (
 								NIH Glycoscience Common Fund
 							</a>
 						</Navbar.Text>
-						<br />
+					</Col>
+					<Col>
 						<Navbar.Text>
 							Grant #{' '}
 							<a
@@ -60,7 +56,7 @@ const Footer = () => (
 							</a>
 						</Navbar.Text>
 					</Col>
-					<Col sm={12} md={6} xl={2}>
+					<Col>
 						<Link to='https://www.ccrc.uga.edu/'>
 							<Image src={uga} className='univ-logo' />
 						</Link>
