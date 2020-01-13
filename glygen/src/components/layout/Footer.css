@@ -1,0 +1,21 @@
+/* .footer {
+	position: static;
+	bottom: 0;
+	width: 100%;
+	padding-top: 10px;
+	min-height: 60px;
+	background-color: #2e78b7;
+	color: white;
+	font-size: 1.1em;
+	font-family: 'Verdana', 'Geneva', sans-serif;
+	z-index: 9;
+
+	padding-top: 50vh;
+} */
+.footer {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-top: auto;
+}
