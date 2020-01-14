@@ -6,10 +6,10 @@
 	margin-top: auto;
 }
 
-a {
+.footer-link {
 	color: var(--light) !important;
 }
-a:hover {
+.footer-link:hover {
 	color: var(--light-blue) !important;
 	text-decoration: none;
 }
@@ -19,4 +19,8 @@ a:hover {
 }
 .univ-logo {
 	padding: 5px 10px 0 10px;
+	width: 40%;
+}
+.logo-footer {
+	width: 60%;
 }

@@ -23,7 +23,7 @@ const Footer = () => (
 								href='#home'
 								src={logoFooter}
 								alt='Glygen'
-								className='justify-content-center'
+								className='justify-content-center logo-footer'
 							/>
 						</Navbar.Brand>
 					</Col>
@@ -41,18 +41,20 @@ const Footer = () => (
 							<a
 								href='https://commonfund.nih.gov/glycoscience'
 								target='_blank'
-								rel='noopener noreferrer'>
+								rel='noopener noreferrer'
+								className='footer-link'>
 								NIH Glycoscience Common Fund
 							</a>
 						</Navbar.Text>
 					</Col>
 					<Col>
 						<Navbar.Text>
-							Grant #{' '}
+							Grant #
 							<a
 								href='https://projectreporter.nih.gov/project_info_details.cfm?aid=9391499&icde=0'
 								target='_blank'
-								rel='noopener noreferrer'>
+								rel='noopener noreferrer'
+								className='footer-link'>
 								1U01GM125267&nbsp;-&nbsp;01
 							</a>
 						</Navbar.Text>
