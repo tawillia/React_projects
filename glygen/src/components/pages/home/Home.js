@@ -5,17 +5,19 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
+import Paper from '@material-ui/core/Paper';
+// import ImgMediaCard from './ImgMediaCard';
 
 const useStyles = makeStyles(theme => ({
 	mainGrid: {
-		marginTop: theme.spacing(3)
+		marginLeft: theme.spacing(3)
 	}
 }));
 
 const mainFeaturedPost = {
-	title: 'Title of a longer featured blog post',
+	title: 'Computational and Informatics Resources for Glycoscience',
 	description:
-		"Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+		'GlyGen is a data integration and dissemination project for carbohydrate and glycoconjugate related data. GlyGen retrieves information from multiple international data sources and integrates and harmonizes this data. This web portal allows exploring this data and performing unique searches that cannot be executed in any of the integrated databases alone.',
 	image: 'https://source.unsplash.com/random',
 	imgText: 'main image description',
 	linkText: 'Continue reading…'
@@ -23,26 +25,43 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
 	{
-		title: 'Featured post',
-		date: 'Nov 12',
+		title: 'Glycan',
 		description:
-			'This is a wider card with supporting text below as a natural lead-in to additional content.',
+			'Search for glycan structures based on their chemical and structural properties.',
+		image: 'https://source.unsplash.com/random',
+		imageText: 'Glycan'
+	},
+	{
+		title: 'Protein',
+		description:
+			'Search for proteins based on their sequences, accessions, and annotations.',
+		image: 'https://source.unsplash.com/random',
+		imageText: 'Protein'
+	},
+	{
+		title: 'Enzyme',
+		description:
+			'Search for enzymes based on protein accession, gene name, and glycan.',
 		image: 'https://source.unsplash.com/random',
 		imageText: 'Image Text'
 	},
 	{
-		title: 'Post title',
-		date: 'Nov 11',
+		title: 'Quick Search',
 		description:
-			'This is a wider card with supporting text below as a natural lead-in to additional content.',
+			'Search for glycans, proteins, species or disease using queries prepared to provide answers to complex biological questions with minimal user input.',
 		image: 'https://source.unsplash.com/random',
-		imageText: 'Image Text'
+		imageText: 'Quick Search'
 	},
 	{
-		title: 'Third title',
-		date: 'Nov 10',
+		title: 'Composition Search',
+		description: 'Composition search based on their ...',
+		image: 'https://source.unsplash.com/random',
+		imageText: 'Composition Search'
+	},
+	{
+		title: 'Statistics',
 		description:
-			'This is a third card with supporting text below as a natural lead-in to additional content.',
+			'GlyGen data visualization via charts, diagrams, and chart bars.',
 		image: 'https://source.unsplash.com/random',
 		imageText: 'Image Text'
 	}
@@ -54,22 +73,22 @@ export default function Home() {
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<Container maxWidth='lg'>
+			<MainFeaturedPost post={mainFeaturedPost} />
+			<Container maxWidth='xl'>
 				<main>
-					<MainFeaturedPost post={mainFeaturedPost} />
-					<Grid container spacing={4}>
-						{featuredPosts.map(post => (
-							<FeaturedPost key={post.title} post={post} />
-						))}
+					<Grid item xs={9}>
+						<Grid container spacing={4}>
+							{featuredPosts.map(post => (
+								<FeaturedPost key={post.title} post={post} />
+							))}
+						</Grid>
 					</Grid>
-					<Grid container spacing={5} className={classes.mainGrid}>
-						{/* <Main title='From the firehose' posts={posts} />
-						<Sidebar
-							title={sidebar.title}
-							description={sidebar.description}
-							archives={sidebar.archives}
-							social={sidebar.social}
-						/> */}
+					<Grid item xs={3}>
+						<Grid container spacing={3} className={classes.mainGrid}>
+							<Grid item xs={12}>
+								<Paper className={classes.paper}> </Paper>
+							</Grid>
+						</Grid>
 					</Grid>
 				</main>
 			</Container>
