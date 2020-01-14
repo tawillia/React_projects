@@ -6,13 +6,14 @@ import ugaLogo from '../images/univ_logos/logo-uga.png';
 import gwuLogo from '../images/univ_logos/logo-gwu.png';
 import { Navbar, Col, Nav, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Container } from 'reactstrap';
+import Container from '@material-ui/core/Container';
 import '../../App.css';
 
 const Footer = () => (
 	<React.Fragment className='fixed-bottom'>
 		<Navbar sticky='bottom' className='gg-bg-blue text-center footer'>
 			<Container
+				maxWidth='xl'
 				className='themed-container container-fluid justify-content-center'
 				fluid={true}>
 				<Row xs='1' sm='2' md='4'>
