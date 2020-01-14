@@ -78,8 +78,8 @@ export default function Home() {
 				<main>
 					<Grid item xs={9}>
 						<Grid container spacing={4}>
-							{featuredCards.map(card => (
-								<FeaturedCard key={card.title} post={card} />
+							{featuredCards.map(post => (
+								<FeaturedCard key={post.title} post={post} />
 							))}
 						</Grid>
 					</Grid>
