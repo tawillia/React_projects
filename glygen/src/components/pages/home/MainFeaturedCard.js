@@ -37,18 +37,18 @@ const useStyles = makeStyles(theme => ({
 
 export default function MainFeaturedCard(props) {
 	const classes = useStyles();
-	const { post } = props;
+	const { card } = props;
 
 	return (
 		<Paper
 			className={classes.mainFeaturedCard}
-			style={{ backgroundImage: `url(${post.image})` }}>
+			style={{ backgroundImage: `url(${card.image})` }}>
 			{/* Increase the priority of the hero background image */}
 			{
 				<img
 					style={{ display: 'none' }}
-					src={post.image}
-					alt={post.imageText}
+					src={card.image}
+					alt={card.imageText}
 				/>
 			}
 			<div className={classes.overlay} />
@@ -60,13 +60,13 @@ export default function MainFeaturedCard(props) {
 							variant='h3'
 							color='inherit'
 							gutterBottom>
-							{post.title}
+							{card.title}
 						</Typography>
 						<Typography variant='h5' color='inherit' paragraph>
-							{post.description}
+							{card.description}
 						</Typography>
 						<Link variant='subtitle1' href='#'>
-							{post.linkText}
+							{card.linkText}
 						</Link>
 					</div>
 				</Grid>

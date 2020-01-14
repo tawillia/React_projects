@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function FeaturedCard(props) {
 	const classes = useStyles();
-	const { post } = props;
+	const { card } = props;
 
 	return (
 		<Grid item xs={12} md={4}>
@@ -39,17 +39,17 @@ export default function FeaturedCard(props) {
 					<Hidden xsDown>
 						<CardMedia
 							className={classes.cardMedia}
-							image={post.image}
-							title={post.imageTitle}
+							image={card.image}
+							title={card.imageTitle}
 						/>
 					</Hidden>
 					<div className={classes.cardDetails}>
 						<CardContent>
 							<Typography gutterBottom variant='h5' component='h2'>
-								{post.title}
+								{card.title}
 							</Typography>
 							<Typography variant='subtitle1' color='textSecondary' paragraph>
-								{post.description}
+								{card.description}
 							</Typography>
 							<Divider className={classes.divider} />
 							<Typography
