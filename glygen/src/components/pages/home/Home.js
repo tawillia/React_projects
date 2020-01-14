@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import MainFeaturedPost from './MainFeaturedPost';
-import FeaturedPost from './FeaturedPost';
+import MainFeaturedCard from './MainFeaturedCard';
+import FeaturedCard from './FeaturedCard';
 import Paper from '@material-ui/core/Paper';
 // import ImgMediaCard from './ImgMediaCard';
 
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const mainFeaturedPost = {
+const mainFeaturedCard = {
 	title: 'Computational and Informatics Resources for Glycoscience',
 	description:
 		'GlyGen is a data integration and dissemination project for carbohydrate and glycoconjugate related data. GlyGen retrieves information from multiple international data sources and integrates and harmonizes this data. This web portal allows exploring this data and performing unique searches that cannot be executed in any of the integrated databases alone.',
@@ -23,7 +23,7 @@ const mainFeaturedPost = {
 	linkText: 'Continue reading…'
 };
 
-const featuredPosts = [
+const featuredCards = [
 	{
 		title: 'Glycan',
 		description:
@@ -73,13 +73,13 @@ export default function Home() {
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<MainFeaturedPost post={mainFeaturedPost} />
+			<MainFeaturedCard post={mainFeaturedCard} />
 			<Container maxWidth='xl'>
 				<main>
 					<Grid item xs={9}>
 						<Grid container spacing={4}>
-							{featuredPosts.map(post => (
-								<FeaturedPost key={post.title} post={post} />
+							{featuredCards.map(post => (
+								<FeaturedCard key={post.title} post={post} />
 							))}
 						</Grid>
 					</Grid>

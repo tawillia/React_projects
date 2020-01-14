@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
-	mainFeaturedPost: {
+	mainFeaturedCard: {
 		position: 'relative',
 		backgroundColor: theme.palette.grey[800],
 		color: theme.palette.common.white,
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 		left: 0,
 		backgroundColor: 'rgba(0,0,0,.3)'
 	},
-	mainFeaturedPostContent: {
+	mainFeaturedCardContent: {
 		position: 'relative',
 		padding: theme.spacing(3),
 		[theme.breakpoints.up('md')]: {
@@ -35,13 +35,13 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-export default function MainFeaturedPost(props) {
+export default function MainFeaturedCard(props) {
 	const classes = useStyles();
 	const { post } = props;
 
 	return (
 		<Paper
-			className={classes.mainFeaturedPost}
+			className={classes.mainFeaturedCard}
 			style={{ backgroundImage: `url(${post.image})` }}>
 			{/* Increase the priority of the hero background image */}
 			{
@@ -54,7 +54,7 @@ export default function MainFeaturedPost(props) {
 			<div className={classes.overlay} />
 			<Grid container>
 				<Grid item md={6}>
-					<div className={classes.mainFeaturedPostContent}>
+					<div className={classes.mainFeaturedCardContent}>
 						<Typography
 							component='h1'
 							variant='h3'
@@ -75,6 +75,6 @@ export default function MainFeaturedPost(props) {
 	);
 }
 
-MainFeaturedPost.propTypes = {
+MainFeaturedCard.propTypes = {
 	post: PropTypes.object
 };
