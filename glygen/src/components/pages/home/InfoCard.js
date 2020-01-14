@@ -1,50 +1,78 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
+import Divider from '@material-ui/core/Divider';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	card: {
+		// display: 'flex'
 		maxWidth: 345
+	},
+	cardTitle: {
+		textAlign: 'center'
+	},
+	cardDetails: {
+		flex: 1
+	},
+	cardMedia: {
+		// width: 160
+		height: 140
+	},
+	divider: {
+		margin: theme.spacing(3, 0)
 	}
-});
+}));
 
-export default function InfoCard() {
+export default function InfoCard(props) {
 	const classes = useStyles();
+	const { post } = props;
 
 	return (
-		<Card className={classes.card}>
-			<CardActionArea>
-				<CardMedia
-					component='img'
-					alt='Contemplative Reptile'
-					height='140'
-					image='/src/components/images/featured_imgs/featuredImg-1.jpg'
-					title='Contemplative Reptile'
-				/>
-				<CardContent>
-					<Typography gutterBottom variant='h5' component='h2'>
-						Lizard
-					</Typography>
-					<Typography variant='body2' color='textSecondary' component='p'>
-						Lizards are a widespread group of squamate reptiles, with over 6,000
-						species, ranging across all continents except Antarctica
-					</Typography>
-				</CardContent>
+		<Grid item xs={12} md={12}>
+			{/* <Card className={classes.card}> */}
+			<CardActionArea component='a' href='#'>
+				<Card className={classes.card}>
+					<div className={classes.cardDetails}>
+						<CardContent>
+							<Typography
+								gutterBottom
+								variant='h5'
+								component='h2'
+								className={classes.cardTitle}>
+								{post.title}
+							</Typography>
+							<Hidden xsDown>
+								<CardMedia
+									className={classes.cardMedia}
+									image={post.image}
+									title={post.imageTitle}
+								/>
+							</Hidden>
+							<Typography variant='subtitle1' color='textSecondary' paragraph>
+								{post.description}
+							</Typography>
+							<Divider className={classes.divider} />
+							<Typography
+								variant='subtitle1'
+								color='primary'
+								className='text-center'>
+								{post.button}
+							</Typography>
+						</CardContent>
+					</div>
+				</Card>
 			</CardActionArea>
-			<CardActions>
-				<Button size='small' color='primary'>
-					Share
-				</Button>
-				<Button size='small' color='primary'>
-					Learn More
-				</Button>
-			</CardActions>
-		</Card>
+		</Grid>
 	);
 }
+
+InfoCard.propTypes = {
+	post: PropTypes.object
+};

@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import MainFeaturedCard from './MainFeaturedCard';
 import FeaturedCard from './FeaturedCard';
+import InfoCard from './InfoCard';
 import Paper from '@material-ui/core/Paper';
 // import ImgMediaCard from './ImgMediaCard';
 
@@ -20,7 +21,7 @@ const mainFeaturedCard = {
 		'GlyGen is a data integration and dissemination project for carbohydrate and glycoconjugate related data. GlyGen retrieves information from multiple international data sources and integrates and harmonizes this data. This web portal allows exploring this data and performing unique searches that cannot be executed in any of the integrated databases alone.',
 	image: 'https://source.unsplash.com/random',
 	imgText: 'main image description',
-	linkText: 'Continue reading…'
+	linkText: 'Learn More…'
 };
 
 const featuredCards = [
@@ -67,6 +68,25 @@ const featuredCards = [
 	}
 ];
 
+const infoCards = [
+	{
+		title: 'Your Opinion Matters',
+		description:
+			'Please provide feedback and suggestions to help us improve the GlyGen portal and make it more useful for the community.',
+		image: 'https://source.unsplash.com/random',
+		imageText: 'Feedback',
+		button: 'LEAVE FEEDBACK'
+	},
+	{
+		title: 'Explore Other Resources',
+		description:
+			'GlyGen is pleased to provide users with a variety of resources in glycobiology.',
+		image: 'https://source.unsplash.com/random',
+		imageText: 'Resources',
+		button: 'EXPLORE'
+	}
+];
+
 export default function Home() {
 	const classes = useStyles();
 
@@ -83,12 +103,16 @@ export default function Home() {
 							))}
 						</Grid>
 					</Grid>
+
 					<Grid item xs={3}>
-						<Grid container spacing={3} className={classes.mainGrid}>
-							<Grid item xs={12}>
-								<Paper className={classes.paper}> </Paper>
-							</Grid>
+						<Grid container spacing={4}>
+							{infoCards.map(post => (
+								<InfoCard key={post.title} post={post} />
+							))}
 						</Grid>
+					</Grid>
+					<Grid item xs={12}>
+						<Paper className={classes.paper}> </Paper>
 					</Grid>
 				</main>
 			</Container>
