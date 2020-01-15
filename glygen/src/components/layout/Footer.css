@@ -20,3 +20,7 @@
 .univ-logo {
 	padding: 5px 10px 0 10px;
 }
+.box-footer {
+	margin: 0 !important;
+	padding: 0 !important;
+}

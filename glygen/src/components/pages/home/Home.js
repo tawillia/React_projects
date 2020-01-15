@@ -97,7 +97,7 @@ export default function Home() {
 			<Container maxWidth='xl'>
 				<main>
 					<Grid item xs={9}>
-						<Grid container spacing={4}>
+						<Grid container spacing={3}>
 							{featuredCards.map(post => (
 								<FeaturedCard key={post.title} post={post} />
 							))}
