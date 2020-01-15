@@ -10,6 +10,9 @@
 	flex-direction: column;
 	position: relative;
 }
+a {
+	text-decoration: none !important;
+}
 
 /* .footer {
 	margin-top: auto;

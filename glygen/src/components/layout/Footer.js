@@ -2,10 +2,9 @@ import React from 'react';
 import './Header.css';
 import './Footer.css';
 import logoFooter from '../images/glygen_logos/glygen-logoW-top.svg';
-import ugaLogo from '../images/univ_logos/logo-uga.png';
-import gwuLogo from '../images/univ_logos/logo-gwu.png';
+import ugaLogo from '../images/univ_logos/logo-uga.svg';
+import gwuLogo from '../images/univ_logos/logo-gwu.svg';
 import { Navbar, Col, Nav, Image, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import '../../App.css';
 
@@ -60,10 +59,16 @@ const Footer = () => (
 						</Navbar.Text>
 					</Col>
 					<Col>
-						<Link to='https://www.ccrc.uga.edu/'>
+						<a
+							href='https://www.ccrc.uga.edu/'
+							target='_blank'
+							rel='noopener noreferrer'>
 							<Image src={ugaLogo} className='univ-logo' />
-						</Link>
-						<a href='https://smhs.gwu.edu/'>
+						</a>
+						<a
+							href='https://smhs.gwu.edu/'
+							target='_blank'
+							rel='noopener noreferrer'>
 							<Image src={gwuLogo} className='univ-logo' />
 						</a>
 					</Col>
