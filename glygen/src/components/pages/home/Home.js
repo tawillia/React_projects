@@ -94,9 +94,10 @@ export default function Home() {
 		<React.Fragment>
 			<CssBaseline />
 			<MainFeaturedCard post={mainFeaturedCard} />
+
 			<Container maxWidth='xl'>
 				<main>
-					<Grid item xs={9}>
+					<Grid item xs={12} md={9}>
 						<Grid container spacing={3}>
 							{featuredCards.map(post => (
 								<FeaturedCard key={post.title} post={post} />
@@ -104,7 +105,7 @@ export default function Home() {
 						</Grid>
 					</Grid>
 
-					<Grid item xs={3}>
+					<Grid item xs={12} md={3}>
 						<Grid container spacing={4}>
 							{infoCards.map(post => (
 								<InfoCard key={post.title} post={post} />
