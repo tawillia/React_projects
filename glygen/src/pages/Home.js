@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import MainFeaturedCard from '../cards/MainFeaturedCard';
-import FeaturedCard from '../cards/FeaturedCard';
-import InfoCard from '../cards/InfoCard';
+import MainFeaturedCard from '../components/cards/MainFeaturedCard';
+import FeaturedCard from '../components/cards/FeaturedCard';
+import InfoCard from '../components/cards/InfoCard';
 import Paper from '@material-ui/core/Paper';
 // import ImgMediaCard from './ImgMediaCard';
 
