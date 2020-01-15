@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import logo from '../images/glygen_logos/glygen-logoW.svg';
+import logo from '../../images/glygen_logos/glygen-logoW.svg';
 import {
 	Form,
 	NavDropdown,

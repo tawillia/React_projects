@@ -1,9 +1,9 @@
 import React from 'react';
 import './Header.css';
 import './Footer.css';
-import logoFooter from '../images/glygen_logos/glygen-logoW-top.svg';
-import ugaLogo from '../images/univ_logos/logo-uga.svg';
-import gwuLogo from '../images/univ_logos/logo-gwu.svg';
+import logoFooter from '../../images/glygen_logos/glygen-logoW-top.svg';
+import ugaLogo from '../../images/univ_logos/logo-uga.svg';
+import gwuLogo from '../../images/univ_logos/logo-gwu.svg';
 import { Navbar, Col, Nav, Image, Row } from 'react-bootstrap';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
